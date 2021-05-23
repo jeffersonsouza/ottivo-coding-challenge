@@ -1,0 +1,22 @@
+{
+  "name": "jeffersonsouza/ottonova",
+  "description": "Ottonova Code Challenge",
+  "type": "project",
+  "require-dev": {
+    "codeception/codeception": "^4.1",
+    "codeception/module-asserts": "^1.0.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jefferson Souza",
+      "email": "hsinfo@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  ottivo:
+    restart: on-failure
+    image: php:alpine
+    working_dir: /app/
+    command: php -f src/ottivo.php
+    volumes:
+      - .:/app
+  test:
+    restart: on-failure
+    image: php:alpine
+    working_dir: /app/
+    command: php vendor/bin/codecept run unit
+    volumes:
+      - .:/app
+  composer:
+    image: composer
+    command: install
+    volumes:
+      - .:/app
